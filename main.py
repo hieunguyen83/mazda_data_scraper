@@ -17,7 +17,7 @@ ETL all data from a pdf file
 # importing python packages
 import pdfplumber
 from pypdf import PdfReader
-import urllib.request as get_image  # this package to scrape whole page image from web in each pdf page
+import urllib.request as get_image  # this package to scrape overview image from web in each pdf page
 import json  # storing scraped data to a JSON file
 import os  # check file if existed for delete, download
 from data_tools import transform_text  #
@@ -27,14 +27,14 @@ import shutil # to remove non-empty folder
 pdf_file = 'mazda_manual.pdf'
 
 # first, download the mazda manual pdf file, save to current folder
-# in this case, the file get it from Google Drive.
+# in this case, download the file from Google Drive.
 if not os.path.exists(pdf_file):  # if the file existed, skip this step
     from data_tools import download_file_from_google_drive
 
     print('Downloading a 34Mb-sized pdf file. This takes 1 - 2 minutes.')
 
-    google_file_id = '1-3v_4cGdMFuTH_X5wzrDnAyYwImYw3qE'
-    file_name = 'mazda_manual.pdf'
+    google_file_id = '1-3v_4cGdMFuTH_X5wzrDnAyYwImYw3qE'  # file id
+    file_name = 'mazda_manual.pdf'  # name it
     download_file_from_google_drive(google_file_id, pdf_file)
 
 # delete file, folder if existed, will generate brand new space.
