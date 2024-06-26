@@ -13,11 +13,16 @@ ETL all data from a pdf file
 - Load add extracted data to JSON file: mazda_data.jsonl
     & all extracted images saved to images folder
 
-"""
+---------- FOR NEXT VERSIONS:
+ - Process thousands of pdf manual files
+ - Reduce time processing
+ - Rendering scraped data for presentation, providing insights using AI/ML
 
+"""
+STEPS
 Step 1: Clone this project to your local computer
 
-Step 2: Create new virtual environement, upgrade pip
+Step 2: Create new virtual environment, upgrade pip
         python -m venv mazda_venv
         python.exe -m pip install --upgrade pip
 
