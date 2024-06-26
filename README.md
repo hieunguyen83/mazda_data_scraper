@@ -1,14 +1,14 @@
 # mazda_data_scraper
 """
 ETL all data from a pdf file
-- Extract data from each page, taking 3 seconds to extract one page. for 720 pages will take 36 minutes.
-    Data type:
+- Extract data from each page. Data type:
     + text
     + table
     + detail small images
     + overview image
 - Transform data:
-    + remove dot line in each index page for readable
+    + table data from pdf --> dataframes
+    + for readability: remove dot line in each index page, replace unicode text with icon
 
 - Load add extracted data to JSON file: mazda_data.jsonl
     & all extracted images saved to images folder
@@ -17,6 +17,7 @@ ETL all data from a pdf file
  - Process thousands of pdf manual files
  - Reduce time processing
  - Rendering scraped data for presentation, providing insights using AI/ML
+ - Develop an API
 
 """
 STEPS
